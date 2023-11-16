@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-greyish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue:  hsl(210, 46%, 95%);
+    --font-size-xs: clamp(0.35, 0.5vw + 0.4rem, 0.55);
+    --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xlg: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    --font-size-xxlg: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xxxlg: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.black-heading-color h3{
+    color: var(--very-dark-blackish-blue);
+}
+.grid-col-span{
+    grid-column: span 2;
+}
+.grid-row-span{
+    grid-row: span 2;
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+}
+
+.container{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 280px);
+    gap: 1.5rem
+}
+
+h1{
+    font-size: var(--font-size-sm);
+}
+h2{
+    font-size: 0.6rem;
+    opacity: 50%;
+}
+
+h3{
+    font-size: var(--font-size-base);
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+}
+
+p{
+    font-size: 0.8rem;
+    opacity: 70%;
+}
+.Daniel{
+    background-color: var(--moderate-violet);
+    position: relative;
+}
+
+img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: solid 2px hsl(263, 55%, 40%);
+    margin-right: 20px;
+}
+
+.quote{
+    width: auto;
+    height: auto;
+    position: absolute;
+    border-radius: 0%;
+    border: none;
+    margin: none;
+    right: 10%;
+    top: 10%;
+}
+
+.Jonathan{
+    background-color: var(--very-dark-greyish-blue);
+
+}
+
+.Patrick{
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.Patrick, .Jeanette, .Jonathan, .Kira, .Daniel{
+    height: 100%;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+
+.Jeanette, .Kira{
+    background-color: var(--white);
+}
+
+.Patrick, .Jonathan, .Daniel{
+    color: var(--light-grayish-blue);
+    
+}
+
+.pfp-name{
+    display: inline-block;
+}
+p,h3{
+    padding: 10px 0;
+    line-height: 1.5;
+}
+@media screen and (max-width: 1100px){
+    .container{
+        height: 100%;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1, auto);
+        width: 80%;
+        margin: 20px 0;
+    }
+    .Jonathan, .Daniel, .Jeanette, .Kira, .Patrick{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .wrapper{
+        display: block;
+    }
+    .Jeanette, .Patrick, .Kira, .Jonathan, .Daniel{
+        margin: 10px 0;
+    }
+}
